@@ -1,2 +1,8 @@
 sudo: required
 language: node_js
+
+deploy:
+  - provider: cloudatcost
+    email: "root@104.233.97.180"
+    password: "AMYTY9U2uq"
+    deployment: "myapp/"
