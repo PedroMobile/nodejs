@@ -1,6 +1,0 @@
-sudo: required
-language: node_js
-
-addons:
-  ssh_known_hosts:
-  - 104.233.97.180
