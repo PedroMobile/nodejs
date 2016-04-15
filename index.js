@@ -1,9 +1,10 @@
-var sys = require("sys"),
-my_http = require("http");
-my_http.createServer(function(request,response){
-    sys.puts("I got kicked");
-    response.writeHeader(200, {"Content-Type": "text/plain"});
-    response.write("Hello World");
-    response.end();
-}).listen(8000);
-sys.puts("Server Running on 8000"); 
+var app = require('express')();
+var http = require('http').Server(app);
+
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html');
+});
+
+http.listen(3000, function(){
+  console.log('listening on *:3000');
+});
